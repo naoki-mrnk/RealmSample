@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  RealmSample
 //
-//  Created by cmStudent on 2021/07/05.
+//  Created by naoki-mrnk on 2021/07/05.
 //
 
 import UIKit

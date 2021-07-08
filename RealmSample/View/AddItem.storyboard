@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Item View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="AddItemViewController" customModule="RealmSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JEg-yt-EHr">
+                                <rect key="frame" x="20" y="631" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOa-TF-vsR">
+                                <rect key="frame" x="196" y="643" width="24" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtW-ed-mSw">
+                                <rect key="frame" x="180.5" y="673" width="53" height="35"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.89019607840000003" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="add"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addArray:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7eL-jE-XVp"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uPt-81-7IW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="563"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uPt-81-7IW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2ls-l4-9t1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JEg-yt-EHr" secondAttribute="trailing" constant="20" id="3oV-GK-kLD"/>
+                            <constraint firstItem="uPt-81-7IW" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="9Ta-iJ-hl3"/>
+                            <constraint firstItem="JEg-yt-EHr" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="200" id="9ZA-sq-RMC"/>
+                            <constraint firstItem="gtW-ed-mSw" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="FMT-GC-65S"/>
+                            <constraint firstItem="JEg-yt-EHr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="QmE-gd-7Os"/>
+                            <constraint firstItem="gtW-ed-mSw" firstAttribute="top" secondItem="JEg-yt-EHr" secondAttribute="bottom" constant="8" id="ldC-i5-aKW"/>
+                            <constraint firstItem="JEg-yt-EHr" firstAttribute="top" secondItem="uPt-81-7IW" secondAttribute="bottom" constant="24" id="oky-A1-iNs"/>
+                            <constraint firstItem="uPt-81-7IW" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="yX0-nQ-4WO"/>
+                            <constraint firstItem="JEg-yt-EHr" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="z7e-jd-dG6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addItemTableView" destination="uPt-81-7IW" id="Eo3-lV-Wy4"/>
+                        <outlet property="textField" destination="JEg-yt-EHr" id="Mfm-dS-NvT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
